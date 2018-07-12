@@ -1,0 +1,60 @@
+# write-up Outline :rocket:
+(in reference to "Compiled Results" and "/Users/kt/Documents/Documents/4483E/")
+
+## Figures/tables to include:
+### CONTROL:
+#### Positive:
+  1. pipeline results table
+  2. filtR table
+
+#### Negative:
+
+
+### TEST:
+  1. effect plots (m/d)
+  2. methods comparison (m/d)
+  3. Deseq2 MA for m - Aldex2 MA for m
+  4. filtR for (m/d)
+
+
+## Supplementary data:
+  1. MA for dada2 - all subgroups (Aldex2/Deseq2)[6]
+  2. MA for other subgroups (m) [4]
+  3. effect plots for other subgroups (m/d) [4]
+  4. tables comparing SVs between groups (m/d) [4]
+  5. dada2:
+    1. err.pdf (t/c)[2]
+    2. qualprofiles (t/c) [2]
+
+## Other data (unused):
+  - PCA Biplots (m/d)
+  - Deseq2 dispersion plots
+  - MW plots from ALDEx
+
+
+  m = mothur, d = dada2, t = test, c = control
+
+
+## Tentative conclusions:
+### CONTROL:
+#### Positive:
+- Since both QIIME and dada2 count tables did not generate technical errors (according to filtR), it is possible that dada2 found more SVs than QIIME due to its higher resolution.
+- The additional SVs may represent biological variation that was falsely clustered using the OTU based approach to processing reads employed by QIIME.
+
+
+#### Negative:
+- Both dada2 and QIIME count tables do not include the synthetic variable regions possibly because they are filtered out due to
+    - low abundances (most likely)
+    - errors? (unlikely)
+    - dada2 could have identified them as potential technical errors
+
+### TEST:
+- results are irreproducible due to lack of detailed reporting of methods by Jiang, et al
+
+
+## To discuss:
+- hypothesis tests used
+- how effect plots work/why they are superior to hypothesis tests  (nature-effect(gloor).pdf)
+- reproducibility problem in science
+    - future directions
+-
