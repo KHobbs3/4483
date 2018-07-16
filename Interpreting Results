@@ -7,6 +7,16 @@ when errors occur by chance
 ## dada2
 - <2% of the reads were found to be chimeric. Indicates a good wet lab protocol!
 
+## [Quality Profiles](https://benjjneb.github.io/dada2/tutorial.html)
+- *[represent the probability that a base is called incorrectly](https://ieeexplore.ieee.org/xpls/icp.jsp?arnumber=6609580)*
+    -  The reads which get quality scores of over 30 points on average have many errorless reads and have low error counts.
+- green line = median quality score
+- orange line = quartiles of quality score distribution
+- grey scale in background = heat map of frequency of quality score at each base position
+
+## [err profiles:](https://www.ncbi.nlm.nih.gov/pubmed/18660515)
+- GC rich regions can be miscalled more often than the others by A to C and C to G
+
 
 ## Biplots
 - poor proportion of variance explained (as prinicipal component) do not neccessarily accurately represent the data
@@ -24,7 +34,8 @@ when errors occur by chance
             - pairwise analysis will reveal where samples differ*
 
 
-## Effect plots
+## ALDEx2 (Gloor article)
+### Effect plots
 - difference within versus between groups
 - benjamini-hochberg adjusted p
 - effect size = difference between/within
@@ -35,6 +46,22 @@ Therefore FPs may still be meaningful.
 - positive predictive value is low(?)
 - in sparse datasets FPs are rare
 - small datasets means larger effect sizes will be observed (skewed) even though they may not be significant in a larger population, therefore they're not as different as they may seem.
+
+
+### Effect plots
+-  Each dot represents a SV
+-  Grey lines = line of equivalence between within and between values
+-  difference within:between groups
+-  Effect tables show no relationships > 1 or < -1 (therefore ratio is equal)
+
+### MA plots:
+
+Reading an MA plot:******
+-Plots difference between measurements of 2 samples (or sub groups)
+-M = log ratio
+-A = mean average
+
+
 
 ## [DESeq2](https://bioc.ism.ac.jp/packages/2.14/bioc/vignettes/DESeq2/inst/doc/beginner.pdf)
 - *base mean:* average of normalized counts/size factors across all samples
