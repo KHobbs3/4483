@@ -160,7 +160,7 @@ _10:00 am - 12:00 pm_
 - 2018 Canada Gairdner Global Health Lecture Series - “Planetary health through food and microbes"
 
 ---
-### Weekly hours: 21.5 hrs
+### Weekly hours: 21.5
 ---
 
 #### Monday, May 7th, 2018 (Total: 7 hours)
@@ -347,7 +347,7 @@ Find published dataset --> download fastQ files-->transfer to agrajag-->run Dada
 - Created powerpoint for presentation (~/undergrad/4/Summer\ 4483E/Presentations/KHobbs\ Introduction\ to\ Thesis)
 
 ---
-### Weekly hours: 27.25 hrs
+### Weekly hours: 27.25
 ---
 
 #### Sunday, May 13, 2018
@@ -470,7 +470,7 @@ Next steps:
 - practiced presentation and edited slides
 
 ---
-###Weekly hours: 26 hrs
+###Weekly hours: 26
 ---
 
 #### Sunday, May 20, 2018 (Total: 2 hours)
@@ -582,7 +582,7 @@ Presentations
   - what are monte carlo instances?
 
 ---
-###Weekly hours: 22.5 hrs
+###Weekly hours: 22.5
 ---
 
 #### Monday, May 29, 2018 (Total: 7 hours)
@@ -732,7 +732,7 @@ Total number of SVs left after filtering and removing zeros:
   - Result: none exist
 
 ---
-### Weekly hours: 25 hrs
+### Weekly hours: 25
 ---
 
 ### Monday, June 4, 2018  (Total: 6.5 hours)
@@ -802,7 +802,7 @@ Matrix = proportionality as averaged across Monte Carlo instances
 
 
 ---
-### Weekly hours: 21 hrs
+### Weekly hours: 21
 ---
 
 ### Monday, June 11, 2018 (Total: 4 hours)
@@ -835,7 +835,7 @@ Matrix = proportionality as averaged across Monte Carlo instances
 - made corrections for thesis write up and fixed latex citations and pdf output
 
 ---
-### Weekly hours: 11 hrs
+### Weekly hours: 11
 ---
 
 #### Wednesday, June 20, 2018 (Total: 7 hours)
@@ -909,7 +909,7 @@ Results:
   - effect plots do not show any SVs that are different
 
 ---
-###Weekly hours: 18.5 hrs
+###Weekly hours: 18.5
 ---
 
 #### Monday, June 25, 2018 (Total: 6 hours)
@@ -1103,7 +1103,7 @@ total # of seqs:	6621139
       - err profiles: C2G appears error prone (deviates from trendline) but the remaining transitions/transversions appear to occur as expected
 
 ---
-###Weekly hours: 24.5 hrs
+###Weekly hours: 24.5
 ---
 
 #### Tuesday, July 3, 2018 (Total: 7 hours )
@@ -1209,9 +1209,11 @@ total # of seqs:	6621139
 - finished up powerpoint presentation for lab meeting
 
 ---
+###Weekly hours: 20
+---
 
-### Sunday, July 8, 2018 (Total: )
-* 11:30 am -
+### Sunday, July 8, 2018 (Total: 2 hours )
+* 11:30 am - 1:30 pm *
 - wrote a summary to explain PCA biplot results for dada2 and mothur and added to powerpoint presentation, 'Compiled Results', and 'Interpreting Results'
 - edited powerpoint
     - removed effect plots in effort to save time and simplify presentation
@@ -1298,8 +1300,8 @@ End of day summary:
 
 ---
 
-#### Thursday, July 12, 2018 (Total: )
-*10:30 am - 2:00 pm*
+#### Thursday, July 12, 2018 (Total: 5.5 hrs )
+*10:30 am - 4:00 pm*
 - [x] made sure all methods scripts are reproducible and understandable
     - [x] **mothur-biplots.R:**
         - dada2 biplot for mothur-generated count table looks slightly different and PCs are slightly higher but overall same general interpretation (no difference between groups)
@@ -1307,30 +1309,88 @@ End of day summary:
         - cut out 454 sequencing results (this was NOT done previously or not recorded in script) to verify results
           *located in "repeat" folder*
         - no differences found in plots
-- [x] created "mothur-InterSubsetComparison.R" script to contrast sequence variants between subgroups
+    - [x] created "mothur-InterSubsetComparison.R" script to contrast sequence variants between subgroups
       - creates summary tables "svs_b4_and_after_filtering.txt" and "common_SVs.txt"
-- [x] **mothur-DESeq2.R:**
+      - [x] **mothur-DESeq2.R:**
       - changed line of code that removes the 454 sequences to include the first sample (original excluded it)
       - MA plots look slightly different but still significantly abnormal
       - updated plots and tables exported to "/Users/kt/Documents/Documents/Undergrad/4/4483E/test/mothuranalysis/DESeq2/corrected"
-- [x] **filt.R:**
-    - mothur: repeated with removing 454 sequences and got no pairs... with added samples also got no pairs. out of curiousity downloaded a new counts table from EBI and repeated to get the same result.
-- [x] **dada2-biplots.R:**
-    - repeat biplots are identical to originals
-- [x] **dada2-ALDEx2.R:**
-    - repeated plots are identical to originals
-- [x] repeated inter-subset comparisons for dada2 in "dada2-InterSubsetComparison.R"
-- [] cleaned up github and lab book
-    - unable to delete folders
+    - [x] **filt.R:**
+      - mothur: repeated with removing 454 sequences and got no pairs... with added samples also got no pairs. out of curiousity downloaded a new counts table from EBI and repeated to get the same result.
+    - [x] **dada2-biplots.R:**
+      - repeat biplots are identical to originals
+    - [x] **dada2-ALDEx2.R:**
+      - repeated plots are identical to originals
+    - [x] repeated inter-subset comparisons for dada2 in "dada2-InterSubsetComparison.R"
 
+- [x] cleaned up github
+    - new repo "4483"
 
-
-- [] start writing results and add to thesis latex file
+- [x] updated "Compiled Results"
+- [x] started writing results summaries for controls (in notebook) and created to-do list for tomorrow
 
 
 ---
-###Weekly hours: 18.5 hrs
+
+#### Friday, July 13, 2018 (Total: 3 hrs)
+*11:30 am - 2:30 pm*
+[x] controls: write summaries
+    - positive
+    - negative
+[x] attempt to find out whats happening to spike-ins through pipelines
+  - ran through "control-negative.R" and corrected errors
+  - ran through "control_dada2.R" and attempted to get SV sequences before filtering
+      - created "control-negative-b4-filt.R" to summarize steps taken
+
+---
+###Weekly hours: 29
 ---
 
+#### Monday, July 16, 2018 (Total: 6 hrs)
+*10:30 am - 4:30 pm *
+[x] ran dada2 through agrajag for negative control
+  - slow step = naming dereplicated reverse reads
+  - time consuming - kept losing connection to R session
+  - had to force quit and restart RStudio
+  - freezes at "seqtab <- makeSequenceTable(derepF, derepR)" line of code
+    - unsuccessfully, changed working directory to exit agrajag since connection to R is lost
+    - to improve this protocol a different function should be used to extract sequences since 'makeSequenceTable' is causing time-consuming errors
+
+[x] wrote detailed summaries for results: (see "Compiled Results")
+- test:
+  - [x] pca Biplots
+  - [x] quality profiles
+  - [x] effect Plots
+  - [x] MA Plots
+    - [x] ALDEx2
+    - [x] DESeq2
+  - [x] filtR
+  - [x] DESEq2 tables
+    - number of significant OTUs/ASvs for dada2 and mothur generated by DESeq2 (Tables 4A,B)
+
+[x] found more sources discussing read-processing pipelines
+- [err profiles:](https://www.ncbi.nlm.nih.gov/pubmed/18660515)
+- [quality profiles](https://ieeexplore.ieee.org/xpls/icp.jsp?arnumber=6609580)
+
+---
+
+#### Tuesday, July 17, 2018 (Total: hrs)
+* am - pm *
 
 TO DO:
+[] fix code for negative control before filtering
+[] apply code to subset significantly different taxa from DESeq2 to ALDEx2 results for dada2 and mothur
+
+[] complete detailed summaries for results: (see Compiled Results)
+  - [] effect tables
+
+[] make results more presentable:
+- new MA plots for dada2 test without red dots
+- new effect plots "
+
+
+---
+###Weekly hours: 6
+---
+
+deficit of 7.75 hrs
