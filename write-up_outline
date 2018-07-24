@@ -4,11 +4,10 @@
 ## Figures/tables to include:
 ### CONTROL:
 #### Positive:
-  1. pipeline results table (Table 6)
-  2. filtR table (Tables 7, 8)
+  1. pipeline results table (Table 7)
 
 #### Negative:
-
+  1. table summarizing attempts
 
 ### TEST:
   1. effect plots (m/d)
@@ -25,6 +24,7 @@
   5. dada2:
     1. err.pdf (t/c)[2]
     2. qualprofiles (t/c) [2]
+  6. filtR graphs 
 
 ## Other data (unused):
   - PCA Biplots (m/d)
@@ -52,9 +52,23 @@
 - results are irreproducible due to lack of detailed reporting of methods by Jiang, et al
 
 
-## To discuss:
-- hypothesis tests used
+## Discussion:
+- hypothesis tests used (in table contrasting methods)
 - how effect plots work/why they are superior to hypothesis tests  (nature-effect(gloor).pdf)
+
+## limitations:
+- caveats in mothur analysis:
+    - Jiang et al used custom python scripts to filter
+    - exact primer sequences used are unknown
+    - Silva reference db file may be different (not disclosed)
+- negative control - what is happening with the spike-ins?
+- processing pipelines are designed to detect true biological variants but there is currently no way to prove or disprove the validity of the claims
+- comparing bacterial names is not ideal as there is so much discrepancy among databases when it comes to assigning taxonomies to sequence variants
+    - using the same db can mediate this; however, Jiang et al did not disclose the version of Silva used
+
+## POTENTIAL CONCLUSIONS:
+- it appears as though the discrepancy in the published results lies in the analytical tool DESeq2 as opposed to in the OTU-based mothur pipeline, which, according to filtR, produces no technical variants.
+- dada2 consistently detected more SVs than the OTU-based pipelines used in the test and control with no technical variants. This seems to suggest that dada2's higher resolution permits for a more thorough and robust distinction of true biological variants.
+  This also suggests that biological variants are likely to be falsely clustered in OTU generation thus generating results with false negatives.
 - reproducibility problem in science
-    - future directions
--
+  - future directions

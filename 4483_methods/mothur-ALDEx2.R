@@ -8,10 +8,11 @@ controls <- c("SRR3501908", "SRR3501909", "SRR3501910", "SRR3501911", "SRR350191
 untreated <- c("SRR3501917", "SRR3501918", "SRR3501921", "SRR3501923", "SRR3501924", "SRR3501932", "SRR3501933", "SRR3501944", "SRR3501960", "SRR3501961", "SRR3501962", "SRR3501963", "SRR3501964", "SRR3501965", "SRR3501966", "SRR3501967", "SRR3501988", "SRR3501989", "SRR3501990", "SRR3501992", "SRR3501993", "SRR3501994", "SRR3501995", "SRR3501996", "SRR3501997", "SRR3501998", "SRR3501999", "SRR3502000", "SRR3502010")
 copaxone <- c("SRR3501919", "SRR3501927", "SRR3501930", "SRR3501931", "SRR3501935", "SRR3501940", "SRR3501942", "SRR3501943", "SRR3501970", "SRR3501971", "SRR3502001", "SRR3502003", "SRR3502005", "SRR3502007")
 interferon <- c("SRR3501920", "SRR3501922", "SRR3501926", "SRR3501928", "SRR3501929", "SRR3501934", "SRR3501937", "SRR3501938", "SRR3501939", "SRR3501941", "SRR3501968", "SRR3501972", "SRR3502004", "SRR3502006", "SRR3502008", "SRR3502009", "SRR3502011", "SRR3502012")
+View(mothur)
 
 mothurd<-mothur[,1:105]
 rownames(mothurd)<-paste(mothur$SampleID, rownames(mothur))
-dim(mothurd)
+colnames(mothurd)
 
 # controls versus untreated ====
 # Step 1: create different pairwise condition vectors since ttests can only run for 2 populations
@@ -50,10 +51,12 @@ aldex.plot(cvu.x.all, type="MA", test="wilcoxon")
 dev.off()
 
 # Step 9: get features passing a specified significance level 
-sig <- which(cvu.x.all$we.eBH < 0.05)
+sig <- which(cvu.x.all$wi.eBH < 0.05)
+sig 
 
 # Step 10: get significant points that only point in the positive direction
-psig <- which(cvu.x.all$we.eBH < 0.05 & cvu.x.all$diff.btw > 0)
+psig <- which(cvu.x.all$wi.eBH < 0.05 & cvu.x.all$diff.btw > 0)
+psig
 
 # Step 11:
 #plot diff btwn vs diff within
@@ -99,8 +102,10 @@ aldex.plot(cvcop.x.all, type="MW", test="wilcoxon")
 dev.off()
 
 
-sig <- which(cvcop.x.all$we.eBH < 0.05)
-psig <- which(cvcop.x.all$we.eBH < 0.05 & cvcop.x.all$diff.btw > 0)
+sig <- which(cvcop.x.all$wi.eBH < 0.05)
+sig
+psig <- which(cvcop.x.all$wi.eBH < 0.05 & cvcop.x.all$diff.btw > 0)
+psig 
 
 pdf("control_copaxone MA_wilcoxon.pdf")
 aldex.plot(cvcop.x.all, type="MA", test="wilcoxon")
@@ -128,8 +133,10 @@ pdf("controls_interferon MA_wilcoxon.pdf")
 aldex.plot(cvint.x.all, type="MA", test="wilcoxon")
 dev.off()
 
-sig <- which(cvint.x.all$we.eBH < 0.05) 
-psig <- which(cvint.x.all$we.eBH < 0.05 & cvint.x.all$diff.btw > 0)
+sig <- which(cvint.x.all$wi.eBH < 0.05) 
+sig
+psig <- which(cvint.x.all$wi.eBH < 0.05 & cvint.x.all$diff.btw > 0)
+psig
 
 pdf("control_interferon btw-win.pdf")
 aldex.plot(cvint.x.all, type="MW", test="welch")

@@ -1374,23 +1374,250 @@ End of day summary:
 
 ---
 
-#### Tuesday, July 17, 2018 (Total: hrs)
-* am - pm *
+#### Tuesday, July 17, 2018 (Total: 5.5 hrs)
+* 9:30 am - 3:00 pm *
+[x] fixed code for negative control before filtering
+  - separated 'makeSequenceTable' code to make table for forward and reverse reads distinctively generating "dada2_before_filt_fwd.txt" and "dada2_before_filt_rvs.txt"
+  - transferred files to "~/4483/control/"
+  - results: no spike-in sequences are found in datasets before filtering... why?***
+    - for my sanity, I validated the absence of spike-in sequences using ctrl+F in excel
+    - confirmed that samples used contain spike-ins by referencing samples used to supplementary information and EBI project summary
+    - cannot confirm whether they are present in QIIME table because sequence table is not published on EBI
 
-TO DO:
-[] fix code for negative control before filtering
-[] apply code to subset significantly different taxa from DESeq2 to ALDEx2 results for dada2 and mothur
+[x] Expanded "Compiled Results" into full sentences to include in write-up and began interpreting results for conclusions
+  > POTENTIAL CONCLUSIONS:
+    - it appears as though the discrepancy in the published results lies in the analytical tool DESeq2 as opposed to in the OTU-based mothur pipeline, which, according to filtR, produces no technical variants.
+    - dada2 consistently detected more SVs than the OTU-based pipelines used in the test and control with no technical variants. This seems to suggest that dada2's higher resolution permits for a more thorough and robust distinction of true biological variants.
+    This also suggests that biological variants are likely to be falsely clustered in OTU generation thus generating results with false negatives.
 
-[] complete detailed summaries for results: (see Compiled Results)
-  - [] effect tables
+[x] made list of limitations:
+  - caveats in mothur analysis:
+    - Jiang et al used custom python scripts to filter
+    - exact primer sequences used are unknown
+    - Silva reference db file may be different (not disclosed)
+  - negative control - what is happening with the spike-ins?
+  - processing pipelines are designed to detect true biological variants but there is currently no way to prove or disprove the validity of the claims
+  - comparing bacterial names is not ideal as there is so much discrepancy among databases when it comes to assigning taxonomies to sequence variants
+      - using the same db can mediate this; however, Jiang et al did not disclose the version of Silva used
+  - Jiang et al subgrouped their cohorts further by age, gender, BMI, dietary history and demographics but did not disclose which samples belonged to which subgroup
+  - lack of significant difference could be result of low power of study
 
-[] make results more presentable:
-- new MA plots for dada2 test without red dots
-- new effect plots "
+[x] made list of questions to answer:
+  - for the negative control, why weren't the spike-in sequences present in the sequence table before filtering?
+  - could clustering of true biological variants (generating FNs) lead to false POSITIVE differences between subgroups?
+  - is there a tool to identify basis for true biological variants?
+      - consider rho and clr cutoff for filtR and the graphs that may associate with it
+          - see chinese elderly paper
+  - is there a way to find number of dada2 ASVs before filtering?
+
+[] find number of significantly more and less abundant ASUs using ALDEx2 for dada2 and mothur
+    - computer froze for 1 hr
+
+- technical difficulties with R made today slow.
+
+---
+
+#### Wednesday, July 18, 2018 (Total: 4 hrs )
+* 9:30 am - 1:30 pm *
+[x] read Gut microbiota of elderly (gloor) paper
+
+[x] began answering list of questions
+* what are other confounding factors to be considered when comparing subgroups? *
+- age: diversity of gut microbiota declines with age (Lynch SV, Pedersen O. 2016. The human intestinal microbiome in health and disease. N Engl J Med 375:2369–2379. doi:10.1056/NEJMra1600266)
+  - limitations: survivor biases
+- gender
+- ethnicity
+- lifestyle
+
+*could clustering of true biological variants (generating FNs) lead to false POSITIVE differences between subgroups?*
+- yes, inclusion of biological variants adds diversity into a cluster thus extending its differentiation
+- https://stats.stackexchange.com/questions/15158/precision-and-recall-for-clustering
+
+*is there a tool to identify basis for true biological variants?*
+    - consider rho and clr cutoff parameters for filtR and the graphs that may associate with it
+    - use filtR updated graph to evaluate discarded sequences
+
+* what are the biological roles of the bacteria found to be different in the published article? *
+Genera:
+- Akkermansia: some species known to partake in immune modulation and contribute to healthy microbiome in gut (Derrien, M.  et al. Modulation of mucosal immune response, tolerance, and proliferation in mice colonized by the mucin-degrader Akkermansia muciniphila. Front. Microbiol. 2, 166 (2011);van Passel, M. W. J.  et al. The genome of Akkermansia muciniphila, a dedicated intestinal mucin degrader, and its use in exploring intestinal metagenomes. PLoS ONE 6, e16876 (2011).)
+
+- Methanobrevibacter smithii is most abundant (there is another Methanobrevibacter less abundant)
+  - have synotrophic relationship with other gut microbiota and are thought to play role in immune response (High prevalence of Methanobrevibacter smithii and Methanosphaera stadtmanae detected in the human gut using an improved DNA detection protocol)
+    *NOTE* that most claims for roles in immune response are by studies with focus on autoimmune diseases (IBS, Crohn's) and thus may hold a small scope
+  -produce short-chain fatty acids (SCFAs) from carbohydrate, which constitutes about 10% of the host̕ s daily energy  (Microbial ecology of methanogens and methanotrophs)[https://www.sciencedirect.com/science/article/pii/S0065211307960058]
+
+- Butyricimonas: (study)[https://www.nature.com/articles/s41398-017-0031-4.pdf?origin=ppub] shows potential role in gut-brain axis
+
+- Prevotella: known to contain a set of bacterial genes for cellulose and xylan hydrolysis ("Impact of diet in shaping gut microbiota...")[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2930426/]
+
+
+[x] found number of significantly more and less abundant ASUs using ALDEx2 we.eBH and wi.eBH for dada2 and mothur (see "Compiled Results" Tables 4C, D, E, F)
+
+[x] added onto list of limitations:
+  - caveats in mothur analysis:
+    - Jiang et al used custom python scripts to filter
+    - exact primer sequences used are unknown
+    - Silva reference db file may be different (not disclosed)
+  - negative control - what is happening with the spike-ins?
+  - processing pipelines are designed to detect true biological variants but there is currently no way to prove or disprove the validity of the claims
+  - comparing bacterial names is not ideal as there is so much discrepancy among databases when it comes to assigning taxonomies to sequence variants
+      - using the same db can mediate this; however, Jiang et al did not disclose the version of Silva used
+  - Jiang et al subgrouped their cohorts further by age, gender, BMI, dietary history and demographics but did not disclose which samples belonged to which subgroup
+  - lack of significant difference could be result of low power of study
+  - research paper also used 454 roche sequencing, which cannot be analyzed with dada2 and may be the source of discrepancy between my and their results
+
+  controls (healthy) | untreated | interferon | glutamirate acetate (copaxone)
+  -------------------|-----------|------------|-------------------------------
+  44 | 29 | 18 | 14
+
+  total = 105 samples from 103 individuals
+
+---
+
+#### Thursday, July 19, 2018 (Total: 4 hrs)
+* 10:30 am - 2:30 pm *
+
+[x] read (Benchmarking of RNA-sequencing analysis workflows using whole- transcriptome RT-qPCR expression data)[https://www.nature.com/articles/s41598-017-01617-3.pdf]
+  - should use in discussion as example of similar research pursuits
+  - is there a way to do what the paper did to contrast the methods?
+
+[x] continued writing results in full sentences and added list of discussion points for the discussion/conclusion
+
+[x] finished attempting to answer questions:
+*could clustering of true biological variants (which generates FNs) lead to false POSITIVE differences between subgroups?*
+- https://stats.stackexchange.com/questions/15158/precision-and-recall-for-clustering
+
+*is there a way to find number of dada2 ASVs before filtering?*
+- compile files from "control-negative-b4-filt.R"
+- reran R script and computer froze
+
+*for the negative control, why weren't the spike-in sequences present in the sequence table before filtering?*
+- could there be something wrong with the spike-in sequences downloaded?
+    - possible errors when stitching together the sequences in the fasta file
+
+---
+
+#### Friday, July 20, 2018 (Total: 5.5 hrs)
+* 9:30 am - 12:00 pm*
+[x] ran updated filtR and looked at graph to evaluate discarded sequences (slow)
+  - test:
+    - **dada2:** no plot generated
+    - **mothur:** plot shown comparing 1 out of 2 OTU pairs removed
+      - saved as "mothur_filtR.pdf" in ~/4483/test/mothuranalysis/
+    - talked with Ben about plots made and added plot information to "Interpreting Results"
+    - added results to "Compiled Results"
+
+*mothur filtR Results:*
+  - rho = 0.7, clr cutoff = 5
+    - 4 OTU pairs removed
+
+  plots:
+    - 3 out of 4 pairs fit well to either both the linear model + expected results line or the linear model alone
+    - 1 pair has, confusingly, lots of dispersion (high residuals) and a high rho value as well as a low clr mean difference
+      - the high rho value is whats driving the pair to be filtered although it is unclear what is driving the high rho values
+      - possible driver is the intercept of the clr mean difference
+
+
+  - control:
+    - **dada2:** no plots generated
+    - **QIIME:** must temporarily remove "tax.vector" column name in excel in order to read table into R with taxonomy as rownames
+      - 1 OTU pair removed (contrary to previous results...)
+      - save plot as "qiime_filtR.pdf" in ~/4483/control/
+      - updated "Compiled Results" (Table 9B.)
+
+*QIIME filtR Results:*
+rho CO | clr CO | QIIME result
+    -------|--------|-------------
+    0.7    | 5      | 1 pair rmvd
+**Table 9B.** filtR results for a counts table generated by QIIME.
+
+plot:
+- linear model and expected line overlap
+- large clr difference between OTUs
+- low residuals but moderate rho value (0.75)
+
+therefore, this OTU pair was correctly removed by filtR and this shows technical variants are present in QIIME output
+
+
+[x] tested to see if errors were incorporated when stitching together the sequences in the fasta file
+  - opened "LC140942.txt" files in excel and manually merged rows to form one sequence as one entry
+  - created and ran "b4_filt_check.R" (slow) and used the manually merged LC140942.txt only to compare sequences before filtering
+    - excessive freezing at line 3 lead to force-quitting RStudio multiple times
+
+
+*12:00 pm - 1:30 pm*
+**Biochemistry pizza lunch**
+
+*1:30 pm - 3:00 pm*
+
+[x] continued testing the manually merged spike-in by running the first portion of "control-negative-b4-filt.R" first through agrajag to avoid freezing
+- intersected 'spike and 'seqtabR'/'seqtabF'
+- still no results shown
+
+[x] reread control article to find any over-looked details that may help deduce why the spike-ins are not present in chosen samples
+  - researches used USEARCH to compare sequences to references
+  - downloaded USEARCH 32 gb from https://www.drive5.com/cgi-bin/download_form.py?accept=yes&version=10.0.240&linux=yes&win32=yes&email=khobbs3%40uwo.ca&B1=Submit
 
 
 ---
-###Weekly hours: 6
+###Weekly hours: 25
 ---
 
-deficit of 7.75 hrs
+#### Monday, July 23, 2018 (Total: 4.5)
+*9:00 am - 11:30 am*
+Lab meeting
+
+*11:30 am - 1:30 pm*
+[x] continued writing results in formal copy
+[x] searched for and downloaded new samples for negative control to repeat
+    - according to supplementary data, some 'Q' samples contain a higher concentration of the spike-in sequences, which would combat any low-abundance filtering done by dada2
+    - cross-referenced to the 'mg_project_summary_20180620', sample Run IDs used are:
+
+    SRR3832216
+    SRR3985724
+    SRR3985757
+    SRR3985763
+
+    - fastQ (FTP) files were downloaded from ENA and saved into "/Users/kt/Documents/Documents/Undergrad/4/4483E/control/ftp_files/negative_control_Q"
+    - transferred to agrajag under ~/control/negative_control_Q
+    - started running dada2 on the 4 samples
+
+---
+
+#### Tuesday, July 24, 2018 (Total: 6 )
+*10:30 am - 4:30 pm*
+- finished running dada2 on negative control samples
+- ran samples through "control-negative-b4-filt.R" and found that the spike-ins, again, were not present in the sample before dada2 filtering
+- repeated negative control with samples
+
+SRR3985779
+SRR3985780
+SRR3985781
+
+SRR3985784
+SRR3985785
+SRR3985786 * only one file available for download on ENA so it was removed in order to keep the dada2 run simple
+
+SRR3985774
+SRR3985775
+SRR3985776
+
+which were included in three different runs and spike-ins were added prior to use. Output saved to ~/control/dada2-output/negative.
+  - still returns a list of zero reads before and after filtering
+
+- sent ben summarized filtR results from control and test projects for his write-up
+- made powerpoint following "write-up_outline" format
+  - positive control tables
+  - negative control summary of attempts
+  - test plots:
+    - biplots
+    - Effect
+    - MA
+
+- updated github 
+
+---
+###Weekly hours: 10.5
+---
+
+deficit of 5.75 hrs

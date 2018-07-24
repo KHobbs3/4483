@@ -1,3 +1,4 @@
+# must run "dada2-ALDEx2_updated.R" script first!
 # checking which removed SVs are present in other subsets ====
 #comparing control and untreated MS
 aldex.controls <- ddf[,controls]

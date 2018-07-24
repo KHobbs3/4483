@@ -2,6 +2,8 @@
 library("ALDEx2")
 setwd('/Users/kt/Documents/Documents/Undergrad/4/4483E/test/CoDa-Output/Part 2 - ALDEx/')
 
+# must run "dada2-biplots_updated.R" first to get dataframe "ddf"
+
 # cvu = controls v untreated ====
 # Step 1: create different pairwise condition vectors since ttests can only run for 2 populations
 #(must have subsetted data first):
@@ -88,14 +90,16 @@ cvcop.x <- aldex.clr(aldex.cvcop, cvcop, mc.samples=128, verbose=TRUE)
 cvcop.x.tt <- aldex.ttest(cvcop.x, cvcop, paired.test=FALSE)
 cvcop.x.effect <- aldex.effect(cvcop.x, cvcop, include.sample.summary=TRUE, verbose=TRUE)
 cvcop.x.all <- data.frame(cvcop.x.tt, cvcop.x.effect)
-cvcop.table <- write.table(cvcop.x.all, file="cont_copax aldex_ttest.txt", sep="\t", quote=F, col.names=NA)
+write.table(cvcop.x.all, file="cont_copax aldex_ttest.txt", sep="\t", quote=F, col.names=NA)
 
 pdf("controls_copaxone.pdf")
 aldex.plot(cvcop.x.all, type="MA", test="welch")
 dev.off()
 
 sig <- which(cvcop.x.all$we.eBH < 0.05)
+sig
 psig <- which(cvcop.x.all$we.eBH < 0.05 & cvcop.x.all$diff.btw > 0)
+psig
 
 pdf("control_copaxone btw-win.pdf")
 aldex.plot(cvcop.x.all, type="MW", test="welch")
@@ -123,7 +127,9 @@ aldex.plot(cvint.x.all, type="MA", test="welch")
 dev.off()
 
 sig <- which(cvint.x.all$we.eBH < 0.05) 
+sig
 psig <- which(cvint.x.all$we.eBH < 0.05 & cvint.x.all$diff.btw > 0)
+psig
 
 pdf("control_interferon btw-win.pdf")
 aldex.plot(cvint.x.all, type="MW", test="welch")

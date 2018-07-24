@@ -2,7 +2,7 @@
 ## dada2
 
 # import sequence table ----
-setwd("/Users/kt/Documents/Documents/Undergrad/4/4483E/control/dada2-output")
+setwd("/Users/kt/Documents/Documents/Undergrad/4/4483E/control/dada2-output/negative")
 d <- read.table("sv_seqs.txt")
 colnames(d) <- c("sv", "sequence")
 View(d)
@@ -24,22 +24,6 @@ for (i in 1:length(spikeins))
 
 names(data)<-spikeins
 
-##transpose, make df, and columns so that the entire sequence is in one column
-library("tidyr")
-
-##***** merge columns so that the entire sequence is combined into one
-as.data.frame(data)
-
-# make all the sequences have the same number of rows by adding a new empty one to those with shorter dim
-temprow <- c(rep("NA", length(data$LC140931.txt))) 
-newrow <- data.frame(temprow)
-colnames(newrow) <- colnames(data$LC140931.txt)
-
-#test <- rbind(data$LC140931.txt, newrow)
-
-#View(test)
-#dim(test)
-
 # paste sequences together so they exist in one col
 data.1 <- list()
 data.2 <- list()
@@ -49,7 +33,7 @@ for (i in data)
 {
   for (k in 2:nrow(i))
   {
-  data.1 <- paste(data.1, i[k,], sep ="")  
+  data.1 <- paste(data.1, i[k,], sep ="")
   }
   data.2 <- c(data.2, data.1)
   data.1 <- list()
@@ -57,23 +41,15 @@ for (i in data)
 
 names(data.2)<-spikeins
 
-data.3 <- as.data.frame(data.2)
-colnames(data.3$LC140931.txt) <- "sequence"
-
-
-
 # merging datasets to identify spikes in dada2 output----
-data.4 <- list()
+data.3 <- list()
 
 for (j in data)
 {
   for (h in j)
   {
-    data.3 <- merge(d, data.2, by = "sequence")
+    data.3 <- intersect(d, data.2)
   }
 }
 
-
-############## old scripts: 
-sv.spikes <- merge(d, data.2, by = "sequence")
-View(sv.spikes)
+View(data.3)

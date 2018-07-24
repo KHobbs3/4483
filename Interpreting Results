@@ -111,6 +111,13 @@ Reading an MA plot:******
     - final5 table: after filtering by clr mean difference cutoff
     - filtR_table: counts table with technical errors removed
 
+*[plots](http://127.0.0.1:14380/library/filtR/doc/filtR.html)*
+- points = comparing abundances of two OTUs (not the sequences within because this isn't given online)
+- red line = linear model
+- black line = expected results, has a slope of 1 and the same y-intercept as the linear model
+- rho considers the deviation from the expected results (higher row = less deviation)
+- if the linear model and expected results are aligned and the SVs have small residuals then the OTU/ASV pairs were correctly removed
+
 ---
 
 ## [Unifrac](https://joey711.github.io/phyloseq-demo/unifrac.html)
