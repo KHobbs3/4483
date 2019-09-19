@@ -3,8 +3,11 @@ Notes and methods for 4483E summer thesis course
 
 # Kaitlyn's Lab Book
 ## Gloor Lab
+----
 #### **Wednesday, May 2nd, 2018** (Total: 8 hours)
+----
 *9:00 - 11:20 am*
+
 - Searched through metagenomic, transcriptomic and metatranscriptomic datasets for a potential research focus.
 - Read  [Metatranscriptome of human faecal microbiol communities in a cohort of adult men](https://doi.org/10.1038/s41564-017-0084-4 and browsed through https://www.ebi.ac.uk/metagenomics/projects. "Abu-Ali et al, 2017")
 - Downloaded Xcode and Bioconductor to prepare for DADA2 download.
@@ -41,6 +44,7 @@ Alternatively, a microbiome study on obese and lean twins has a population size 
 ----
 
 #### Thursday, May 3rd, 2018 (Total: 6.5 hours)
+----
 *9:30 am - 12:00 pm*
 - downloaded atom, watched tutorials on valid syntax, and updated yesterdays entry accordingly
 - found and received approval from Dr. Gloor for research dataset with a sample size of 103 and both illumina MiSeq and 454 GS FLX+ sequencing methods: [Alterations of the human gut microbiome in multiple sclerosis](https://www.nature.com/articles/ncomms12015 "Jangi et al, 2015")
@@ -136,8 +140,10 @@ assign taxonomies and species.
   - greater resolution (1-2 nucleotides)
   - processes larger datasets
   - more "exact" than cluster based approach of OTUs
+
 ----
 #### Friday, May 4th, 2018 (Total: 7 hours)
+----
 _10:00 am - 12:00 pm_
 - Read [Microbiome Datasets Are Compositional: And This Is Not Optional](https://www.frontiersin.org/articles/10.3389/fmicb.2017.02224/full)
 - Read [An investigation of the false discovery rate and the misinterpretation of _p_-values](http://rsos.royalsocietypublishing.org/content/royopensci/1/3/140216.full.pdf)
@@ -162,11 +168,12 @@ _10:00 am - 12:00 pm_
 *12:30 pm - 5:30 pm*
 - 2018 Canada Gairdner Global Health Lecture Series - “Planetary health through food and microbes"
 
----
+
 ### Weekly hours: 21.5
 ---
 
 #### Monday, May 7th, 2018 (Total: 7 hours)
+----
 *9:00 am - 11:20 am*
 Lab meeting at St. Joseph's
 - presented introductory powerpoint
@@ -187,9 +194,9 @@ ssh khobbs3@agrajag.biochem.fmd.uwo.ca
 Find published dataset --> download fastQ files-->transfer to agrajag-->run Dada2 script on R
 -->record output-->compare to OTU processed results
 
-  ---
-
+  ----
   #### Tuesday, May 8, 2018 (Total: 5 hours)
+  ----
   *9:30 am - 11:30 am*
   - worked through [Dada2 workflow](https://github.com/ggloor/miseq_bin/blob/master/dada2_workflow_1.6.R)
     - cannot connect to agrajag through finder (control K), so had to transfer saved files from agrajag to KT's Macbook using scp
@@ -250,9 +257,10 @@ Find published dataset --> download fastQ files-->transfer to agrajag-->run Dada
     - To Read:
       [] [The data we have: multivariate compositional data](https://github.com/ggloor/CoDa_microbiome_tutorial/blob/master/multi_comp.pdf)
       [] [CoDa and Sequencing](https://github.com/ggloor/CoDa_microbiome_tutorial/blob/master/coda_seq.pdf)
-  ---
-
+ 
+----
 #### Wednesday, May 9, 2018 (Total: 6 hours)
+----
 *9:40 am - 12:00 pm*
 - Read:
   - [x] The data we have: multivariate compositional data
@@ -314,9 +322,9 @@ Find published dataset --> download fastQ files-->transfer to agrajag-->run Dada
   - values in PC-coordinates = "scores"
   - **Overall:** reduce multidimensional data to lower dimension while retaining information
 
----
-
+----
 #### Thursday, May 10, 2018 (Total: 5 hours)
+----
 *9:40 am - 1:15 pm*
 - relabelled subsets:
   - controls = "C"
@@ -341,26 +349,26 @@ Find published dataset --> download fastQ files-->transfer to agrajag-->run Dada
   - successfully generated biplot with subset labels, saved as "Subset Biplot Dada2.pdf" in ~/Documents/4/Summer\ 4483E/CoDa-Output
   - starting writing CoDa Methods with code annotations to better understand the functions used as well as add in variations I made to achieve output
 
----
-
+----
 #### Friday, May 11, 2018
+----
   *9:45 am - 2:00 pm* (Total: 4.25 hours)
 - Wrote point form background file in preparation for introductory thesis presentation (/Users/kait/Documents/4/Summer\ 4483E/Lab Book/Background)
     - Read [Exact sequence variants should replace operational taxonomic units in marker-gene data analysis](www.nature.com/ismej)
 - Created powerpoint for presentation (~/undergrad/4/Summer\ 4483E/Presentations/KHobbs\ Introduction\ to\ Thesis)
 
----
-### Weekly hours: 27.25
----
 
+### Weekly hours: 27.25
+----
 #### Sunday, May 13, 2018
+----
 *8:00 pm - 10:00 pm* (Total: 2 hours)
 - Reviewed and edited powerpoint
 - Wrote script for presentation (on khobbs3@uwo.ca OneDrive)
 
----
-
+----
 #### Monday, May 14, 2018
+----
 *9:00 am - 12:00 pm* (Total: 5 hours)
 R Workshop Beginner
 
@@ -368,9 +376,9 @@ R Workshop Beginner
 - Edited powerpoint and script
 - Added a summary of Dada2 workflow to Background methods and powerpoint
 
----
-
+----
 #### Tuesday, May 15, 2018 (Total: 1 hour)
+----
 *9:45 am - 11:00 am*
 - added more detail to Illumina Background and powerpoint - why reads are multiplexed
 - received control dataset from Ben
@@ -378,9 +386,9 @@ R Workshop Beginner
     - **Note:** only grab 33 samples (2 runs from the each sample to compare runs)
 - computer was excruciatingly slow, left early to go to the Genius Bar
 
----
-
+----
 #### Wednesday, May 16, 2018 (Total: 4.5 Hours)
+----
 *9:30 am - 10:20 am*
 - Helped Toby with the Dada2 workflow, explained to him the premise of my research
 
@@ -397,9 +405,9 @@ R Workshop Beginner
 *3:00 pm - 5:00 pm*
 Ethics presentations with Dr. Ball
 
----
-
+----
 #### Thursday, May 17, 2018 (Total: 6.5 hours)
+----
 *9:30 am - 12:00 pm*
 - emailed project title to Lindsay Ralph
 - worked through CoDa from the beginning
@@ -467,21 +475,21 @@ Next steps:
   - multivariate analysis - ALDEx.clr function
     - on transformed data (dd.clr) for change between subsets/groupings
 
----
-
+----
 #### Saturday, May 19, 2018 (Total: 2 hours)
+----
 - practiced presentation and edited slides
 
----
 ###Weekly hours: 26
----
 
+----
 #### Sunday, May 20, 2018 (Total: 2 hours)
+----
 - practiced presentation and revised slides
 
----
-
-#### Tuesday, May 22, 2018 (Total: 7 hours )
+----
+#### Tuesday, May 22, 2018 (Total: 7 hours)
+----
 *9:30 am - 11:00 am*
 - Presented slides to Ben and Dan and received feedback
 - Revised slides (objectives, OTU and ASV approach in detail, methods, and expected results)
@@ -505,9 +513,9 @@ Next steps:
 to review OTUs vs ASVs
 - Practiced presentation
 
----
-
+----
 #### Wednesday, May 23, 2018 (Total: 9.5 hours )
+----
 *9:30 am - 4:00 pm*
 - continued search for a way to sort data frame by metadata for CoDa Part 2:
   - referenced [mmaklai Github] (https://github.com/mmacklai/example-scripts/blob/master/aldex2/aldex2example.R)
@@ -542,9 +550,9 @@ and added notes on error rates to Background.
 *6:30 pm - 9:30 pm*
 - edited powerpoint and script and practiced presenting
 
----
-
+----
 #### Thursday, May 24, 2018 (Total: 2 hours)
+----
 *9:45 am - 12:00 pm*
 - presented powerpoint to lab group and made edits:
   - slide: "Introduced Error"
@@ -557,9 +565,9 @@ and added notes on error rates to Background.
 *2:45 pm - 4:45 pm*
 Presentations
 
----
-
+----
 #### Friday, May 25, 2018  (Total: 2 hours)
+----
 *9:30 am - 12:00 pm*
 - read [Compositional analysis: a valid approach to analyze microbiome high-throughput sequencing data](http://www.nrcresearchpress.com/doi/pdf/10.1139/cjm-2015-0821)
 - downloaded LaTeX
@@ -584,11 +592,11 @@ Presentations
   - is the significance level (0.05) too large?
   - what are monte carlo instances?
 
----
-###Weekly hours: 22.5
----
 
+###Weekly hours: 22.5
+----
 #### Monday, May 29, 2018 (Total: 7 hours)
+----
 *9:00 am - 11:30 am*
 Lab meeting at St. Joseph's Hospital
 
@@ -632,9 +640,9 @@ data transformation |  |
 multiple test correction ||
 test type | welches/wilcoxon rank-sum |
 
----
-
+----
 #### Tuesday, May 30, 2018 (Total: 6.5 hours)
+----
 *9:30 am - 12:00 pm*
 
 - reviewed how reads were filtered (dd.czm and dd.clr have different applied functions)
@@ -690,9 +698,9 @@ data transformation | clr | unifrac for overall community differences, DESeq2 fo
 multiple test correction | Benjamini-Hochberg 0.1 | Benjamini-Hochberg 0.1
 test type | welches/wilcoxon rank-sum | Wilcoxon rank-sum or Walds?!
 
----
-
+----
 #### Wednesday, May 30, 2018 (Total: 3.5 hours)
+----
 *9:45 am -  12:00 pm*
 
 - created separate table for taxonomy labels from dada2_nochim_tax using str_split_fixed function in R
@@ -706,9 +714,9 @@ test type | welches/wilcoxon rank-sum | Wilcoxon rank-sum or Walds?!
 - attempted to download processed reads from [EBI](https://www.ebi.ac.uk/ena/browse/sequence-download) but could not login to [FTP server](ftp://ftp.ebi.ac.uk/pub/databases/ena/sequence)
 using khobbs3 user and password
 
----
-
+----
 #### Thursday, May 31, 2018 (Total: 7 hours)
+----
 *10:15 am - 5:00 pm *
 - Solved issues in generating biplots and filtering data (review code used to achieve this)
   - modified filter code in CoDa Part 1 to remove internal loop and generate new dataframe ('ddf')
@@ -726,19 +734,19 @@ Total number of SVs left after filtering and removing zeros:
   - 1179
 
 
----
-
+----
 ### Friday, June 1, 2018 (Total: 1 hour)
+----
 * 2:20 pm - 3:20 pm*
 - completed tables for Butyricimonas and renamed rownames to reflect SV numbers
 - searched for any SVs with 1 < effect size < -1
   - Result: none exist
 
----
 ### Weekly hours: 25
----
 
+----
 ### Monday, June 4, 2018  (Total: 6.5 hours)
+----
 *9:30 am - 4:00 pm*
 - worked with ben's rho analysis workflow on MS study
   - Result: using a rho value of 0.7 and 0.6 no mean differences in clrs were detected
@@ -768,9 +776,9 @@ Total number of SVs left after filtering and removing zeros:
 - began writing introduction and background for 4483E submission
 
 
----
-
+----
 #### Wednesday, June 6, 2018 (Total: 5.5 hours)
+----
 *10:30 am - 12:30 pm*
 - Unsuccessful attempt at generating strip charts for MS dataset
    - group table must be comprised of only two subsets to have the same number of rows as the aldex.out table; however, the subsetted groups are by sample names and the group table contains SV names instead.
@@ -783,15 +791,15 @@ Total number of SVs left after filtering and removing zeros:
   - *Rapid and comprehensive identification of prokaryotic organisms by metagenomic analysis. U.S. Pat. No. 8,532,934.*
   - *Microbiome Profiling by Illumina Sequencing of Combinatorial Sequence-Tagged PCR Products*
 
----
-
+----
 #### Thursday, June 7, 2018 (Total: 4 hours)
+----
 *10:30 am - 2:30 pm*
 - Continued writing introduction
 
----
-
+----
 #### Friday, June 8, 2018 (Total: 5 hours)
+----
 *10:30 am - 3:30 pm*
 - Read:
   - Schloss, P. D. (2010). The effects of alignment quality, distance calculation method, sequence filtering, and region on the analysis of 16S rRNA gene-based studies. PLoS computational biology, 6(7), e1000844.
@@ -804,11 +812,11 @@ ALDEx2 adds 0.5 to all counts. Otherwise logratio = transformed counts as averag
 Matrix = proportionality as averaged across Monte Carlo instances
 
 
----
 ### Weekly hours: 21
----
 
+----
 ### Monday, June 11, 2018 (Total: 4 hours)
+----
 *10:00 am - 11:30 am*
 - continued writing and editing Introduction
   - To add:
@@ -818,30 +826,30 @@ Matrix = proportionality as averaged across Monte Carlo instances
 - read pages 1-23, 53 of *Compositional analysis of high throughput sequencing data (Gloor, 2018)*
 - added references to EndNote and attempted to automate citations in Latex.
 
----
-
+----
 #### Tuesday, June 12, 2018 (Total 4 hours)
+----
 *10:30 am - 2:30 pm*
 - formatted latex thesis document to include references and figures.
 - reviewed readings
 - sent rough draft to Dr. Gloor
 
----
-
+----
 #### Wednesday, June 13, 2018 (Total: 2 hours)
+----
 *12:00 am - 2:00 pm*
 - edited thesis writing
 
----
-
+----
 #### Friday, June 15, 2018 (Total: 1 hour)
+----
 - made corrections for thesis write up and fixed latex citations and pdf output
 
----
 ### Weekly hours: 11
----
 
+----
 #### Wednesday, June 20, 2018 (Total: 7 hours)
+----
 *10:00 am - 5:00 pm*
 - reread [Synthetic spike-in standards for high-throughput 16S rRNA amplicon sequencing](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5389483/#sup1)
 - identified samples to download:
@@ -865,9 +873,9 @@ These samples were chosen because they contain consistent concentrations of spik
 - received error when assigning taxonomy: ">" expected at beginning of line 1, likely indicates improper format of fastQ files; however, the FTP downloads seem to be acceptable.
 May need to re-download or save as plain text.
 
----
-
+----
 #### Thursday, June 21, 2018 (Total: 5.5 hours)
+----
 *10:00 am - 3:30 pm *
 - reran dada2 workflow in R in attempt to correct yesterday's error. Computer froze for two hours.
 - discussed project progress with Dr. Gloor:
@@ -889,9 +897,9 @@ mean abundance/var* | no assumptions | assumes mean < var, subject to shrinkage
   - imported and split cols in RStudio
   - *note: in workflow se = counts, and seIDx = cts *
 
----
-
+----
 #### Friday, June 22, 2018 (Total: 6 hours)
+----
 *10:00 am - 1:00 pm*
 *Bcc summer seminars:*
   - transition from academia to industry
@@ -911,11 +919,12 @@ mean abundance/var* | no assumptions | assumes mean < var, subject to shrinkage
 Results:
   - effect plots do not show any SVs that are different
 
----
-###Weekly hours: 18.5
----
 
+###Weekly hours: 18.5
+
+----
 #### Monday, June 25, 2018 (Total: 6 hours)
+----
 *10:00 am - 3:15 pm*
 - [x] ran dada2 --> DESeq2
   - did not need code from previous day, instead followed 2.4.3 and 3.2 from [Beginner's guide to using the DESeq2 package](https://bioc.ism.ac.jp/packages/2.14/bioc/vignettes/DESeq2/inst/doc/beginner.pdf)
@@ -971,9 +980,9 @@ Results:
 
     - updated dada2proprworkflow.R so that output is readable (used 'write.table' insteald of 'pdf()')
 
----
-
+----
 #### Tuesday, June 26, 2018 (Total: 7 hours)
+----
 * 9:45 am - 5:00 pm*
 - [x] update mothurproprworkflow.R so that output is readable (use 'write.table' instead of 'pdf()') ** be mindful of which cols are being removed (tax = rownames)
     - redownloaded .tsv file from EBI and cut out tax col
@@ -1003,9 +1012,9 @@ Results:
 
     - MA plots don't look normal - could be consequence of method of normalizing data...
 
----
-
+----
 #### Wednesday, June 27, 2018 (Total: 7 hours)
+----
 * 10:00 am - 4:30 pm *
 - attempted to deduce why the DESeq2-generated MA plots look irregular
   - tried dropping levels of ddsFullCountTable$condition before running pipeline - *plots still irregular*
@@ -1067,9 +1076,9 @@ Mean:	| 1 |	252 |	252 |	0 |	4
 # of unique seqs:	1468617
 total # of seqs:	6621139
 
----
-
+----
 #### Thursday, June 28, 2018 (Total: 1.5 hours)
+----
 * 4:00 pm - 5:30 pm *
 - [] mothur pipeline (in terminal):
   - [] download [arp](http://bugs.arb-home.de/wiki/ArbOSX)
@@ -1088,9 +1097,9 @@ total # of seqs:	6621139
 - [] Unifrac unweighted -> AMOVA
 - [] PCoA plots
 
----
-
+----
 #### Friday, June 29, 2018 (Total: 3 hours)
+----
 * 9:30 am - 12:00 pm *
 - in order to download Arb, a certain amount of RAM is required...
 - [] repeat DESeq analysis using Wilcoxon rank sum test
@@ -1105,11 +1114,12 @@ total # of seqs:	6621139
     RESULTS:
       - err profiles: C2G appears error prone (deviates from trendline) but the remaining transitions/transversions appear to occur as expected
 
----
-###Weekly hours: 24.5
----
 
-#### Tuesday, July 3, 2018 (Total: 7 hours )
+###Weekly hours: 24.5
+
+----
+#### Tuesday, July 3, 2018 (Total: 7 hours)
+----
 * 9:30 am - 4:30 pm*
 - [x] reviewed positive control results:
   - quality scores:
@@ -1169,9 +1179,9 @@ total # of seqs:	6621139
 - stuck at referencing silva db - how do I ensure primers are aligned to db? start and end from summary.seq() do not align.
     - changed start and end to match the minimum start/end from summary.seq() and got the same result
 
----
-
+----
 ### Wednesday, July 4, 2018 (Total: 6 hours)
+----
 *10:30 am - 4:30 pm *
 - [x] summarized count tables for test dada2 and mothur
 - computer froze for 1.5 hours, then I backed it up on a hard drive
@@ -1186,9 +1196,9 @@ total # of seqs:	6621139
   Additionally, deviations in the processed results will accumulate in downstream analysis, generating vastly different and incomparable results.
   Consequently, the attempts to reproduce the paper's results will be aborted.
 
----
-
+----
 ### Friday, July 6, 2018 (Total: 6 hours)
+----
 * 9:30 am - 1:30 pm *
 - [x] wrote up conclusions about test results
 - [x] created powerpoint for next lab meeting ("Khobbs - Jul 9")
@@ -1205,17 +1215,18 @@ total # of seqs:	6621139
 * 3:00 pm - 5:00 pm *
 - searched for sequences of sequence variants from published article and began trying to isolate all the SVs with NA for taxonomy using R.
 
----
-
+----
 ### Saturday, July 7, 2018 (Total: 1 hour)
+----
 *1:00 - 2:00 pm*
 - finished up powerpoint presentation for lab meeting
 
----
-###Weekly hours: 20
----
 
+###Weekly hours: 20
+
+----
 ### Sunday, July 8, 2018 (Total: 2 hours )
+----
 * 11:30 am - 1:30 pm *
 - wrote a summary to explain PCA biplot results for dada2 and mothur and added to powerpoint presentation, 'Compiled Results', and 'Interpreting Results'
 - edited powerpoint
@@ -1224,9 +1235,9 @@ total # of seqs:	6621139
     - referenced Ben's filtR and added more filtR results
 - rehrearsed presentation
 
----
-
+----
 #### Monday, July 9, 2018 (Total: 7 hours)
+----
 *9:00 am - 12:00 pm*
 Lab meeting
 
@@ -1264,9 +1275,9 @@ Lab meeting
          R is not running on agrajag today so this task will be performed tomorrow.
 - supplementary information also states that 'centroid' sequences were referenced to Greengenes database (release 13_5)
 
----
-
+----
 #### Tuesday, July 10, 2018 (Total: 5.5 hours)
+----
 *9:45 am - 3:15 pm*
 - reran script for negative control
   - no results. if both dada2 and QIIME removed synthetic variable sequences then how did the researchers use them as spike-in standards?
@@ -1287,9 +1298,9 @@ End of day summary:
       - errors? (unlikely)
       - dada2 could have identified them as potential technical errors
 
----
-
-#### Wednesday, July 11, 2018 (Total: 6 hours )
+----
+#### Wednesday, July 11, 2018 (Total: 6 hours)
+----
 *10:00 am - 4:00 pm*
 - [x] attempted to generate table of sequences before filtering again for dada2 by changing the class of input for 'getSequences' function
     - class must be "derep-class" or "dada-class" which both require a list with specific entities. class may also be a dataframe with $abundance and $sequence columns which are not included in 'fnFs'
@@ -1301,9 +1312,9 @@ End of day summary:
 - [x] made a list and rough outline of significant results/discussion/tentative conclusions to include in write up ("write-up_outline")
 - [x] read and highlighted Dr. Gloor's "A reproducible effect size is more useful than an irreproducible hypothesis test to analyze high-throughput sequencing datasets"
 
----
-
-#### Thursday, July 12, 2018 (Total: 5.5 hrs )
+----
+#### Thursday, July 12, 2018 (Total: 5.5 hrs)
+----
 *10:30 am - 4:00 pm*
 - [x] made sure all methods scripts are reproducible and understandable
     - [x] **mothur-biplots.R:**
@@ -1333,9 +1344,9 @@ End of day summary:
 - [x] started writing results summaries for controls (in notebook) and created to-do list for tomorrow
 
 
----
-
+----
 #### Friday, July 13, 2018 (Total: 3 hrs)
+----
 *11:30 am - 2:30 pm*
 [x] controls: write summaries
     - positive
@@ -1345,11 +1356,12 @@ End of day summary:
   - ran through "control_dada2.R" and attempted to get SV sequences before filtering
       - created "control-negative-b4-filt.R" to summarize steps taken
 
----
-###Weekly hours: 29
----
 
+###Weekly hours: 29
+
+----
 #### Monday, July 16, 2018 (Total: 6 hrs)
+----
 *10:30 am - 4:30 pm *
 [x] ran dada2 through agrajag for negative control
   - slow step = naming dereplicated reverse reads
@@ -1375,9 +1387,9 @@ End of day summary:
 - [err profiles:](https://www.ncbi.nlm.nih.gov/pubmed/18660515)
 - [quality profiles](https://ieeexplore.ieee.org/xpls/icp.jsp?arnumber=6609580)
 
----
-
+----
 #### Tuesday, July 17, 2018 (Total: 5.5 hrs)
+----
 * 9:30 am - 3:00 pm *
 [x] fixed code for negative control before filtering
   - separated 'makeSequenceTable' code to make table for forward and reverse reads distinctively generating "dada2_before_filt_fwd.txt" and "dada2_before_filt_rvs.txt"
@@ -1418,9 +1430,9 @@ End of day summary:
 
 - technical difficulties with R made today slow.
 
----
-
-#### Wednesday, July 18, 2018 (Total: 4 hrs )
+----
+#### Wednesday, July 18, 2018 (Total: 4 hrs)
+----
 * 9:30 am - 1:30 pm *
 [x] read Gut microbiota of elderly (gloor) paper
 
@@ -1475,9 +1487,9 @@ Genera:
 
   total = 105 samples from 103 individuals
 
----
-
+----
 #### Thursday, July 19, 2018 (Total: 4 hrs)
+----
 * 10:30 am - 2:30 pm *
 
 [x] read (Benchmarking of RNA-sequencing analysis workflows using whole- transcriptome RT-qPCR expression data)[https://www.nature.com/articles/s41598-017-01617-3.pdf]
@@ -1498,9 +1510,9 @@ Genera:
 - could there be something wrong with the spike-in sequences downloaded?
     - possible errors when stitching together the sequences in the fasta file
 
----
-
+----
 #### Friday, July 20, 2018 (Total: 5.5 hrs)
+----
 * 9:30 am - 12:00 pm*
 [x] ran updated filtR and looked at graph to evaluate discarded sequences (slow)
   - test:
@@ -1562,11 +1574,11 @@ therefore, this OTU pair was correctly removed by filtR and this shows technical
   - downloaded USEARCH 32 gb from https://www.drive5.com/cgi-bin/download_form.py?accept=yes&version=10.0.240&linux=yes&win32=yes&email=khobbs3%40uwo.ca&B1=Submit
 
 
----
 ###Weekly hours: 25
----
 
+----
 #### Monday, July 23, 2018 (Total: 4.5)
+----
 *9:00 am - 11:30 am*
 Lab meeting
 
@@ -1585,9 +1597,9 @@ Lab meeting
     - transferred to agrajag under ~/control/negative_control_Q
     - started running dada2 on the 4 samples
 
----
-
-#### Tuesday, July 24, 2018 (Total: 6 )
+----
+#### Tuesday, July 24, 2018 (Total: 6)
+----
 *10:30 am - 4:30 pm*
 - finished running dada2 on negative control samples
 - ran samples through "control-negative-b4-filt.R" and found that the spike-ins, again, were not present in the sample before dada2 filtering
@@ -1619,8 +1631,7 @@ which were included in three different runs and spike-ins were added prior to us
 
 - updated github 
 
----
 ###Weekly hours: 10.5
----
 
-deficit of 5.75 hrs
+
+
